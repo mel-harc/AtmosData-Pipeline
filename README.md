@@ -1,10 +1,16 @@
 # 🌤️ Weather Data Analytics Platform
 
 A comprehensive, containerized weather data pipeline that orchestrates real-time weather data ingestion, transformation, and visualization using modern data engineering tools.
+<div align="center">
+  
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Apache Airflow](https://img.shields.io/badge/Apache-Airflow-red?style=for-the-badge&logo=apache-airflow)
+![dbt](https://img.shields.io/badge/dbt-Core-orange?style=for-the-badge&logo=dbt)
+![Superset](https://img.shields.io/badge/Superset-Business_Intelligence-20A6C9?style=for-the-badge&logo=apache&logoColor=white)
 
-![Architecture](https://img.shields.io/badge/Architecture-Microservices-blue)
-![Status](https://img.shields.io/badge/Status-Production_Ready-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+</div>
 
 ## 🏗️ Architecture Overview
 
@@ -127,8 +133,8 @@ weather_data_project/
 #### **Step 2: Clone and Configure** 
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd weather_data_project
+git clone git@github.com:mel-harc/AtmosData-Pipeline.git
+cd AtmosData-Pipeline
 
 # Create environment file in the api-request directory
 cd api-request
@@ -162,16 +168,13 @@ pip install -r requirements.txt
 ```bash
 # Start all services
 make all
-
-# Alternative: direct docker-compose
-docker-compose up -d
 ```
 
 ### 3. **Access the Services**
 
 | Service | URL | Credentials |
 |---------|-----|-------------|
-| **Airflow** | http://localhost:8000 | admin / admin |
+| **Airflow** | http://localhost:8000 | admin / Your PWD |
 | **Superset** | http://localhost:8088 | admin / admin |
 | **PostgreSQL** | localhost:5000 | ipman / ipman42 |
 
@@ -224,38 +227,6 @@ CREATE TABLE dev.raw_weather_data (
 - **dbt Logs**: Transformation process tracking
 - **PostgreSQL Logs**: Database performance and query analysis
 - **Docker Logs**: Container health and resource utilization
-
-## 🛠️ Local Development
-
-### Python Dependencies 📦
-The project includes a `requirements.txt` file with all necessary Python packages:
-
-```txt
-# Core Dependencies
-requests==2.31.0          # HTTP requests for API calls
-psycopg2-binary==2.9.7    # PostgreSQL database adapter
-python-dotenv==1.0.0      # Environment variable management
-
-# Optional Development Tools
-pandas==2.1.0             # Data manipulation (if needed)
-dbt-core==1.6.0           # Local dbt development
-pytest==7.4.0             # Testing framework
-```
-
-### Local Testing 🧪
-```bash
-# Activate your virtual environment
-source venv/bin/activate  # Linux/macOS
-# or
-venv\Scripts\activate     # Windows
-
-# Test API connection locally
-cd api-request
-python api_request.py
-
-# Test database insertion (requires running PostgreSQL container)
-python insert_records.py
-```
 
 ### Development Workflow 🔄
 1. **Make changes** to Python scripts in `api-request/`
@@ -320,7 +291,7 @@ python insert_records.py
   1. Verify your `.env` file exists in the `api-request/` directory
   2. Check that your Weatherstack API key is correct
   3. Ensure you haven't exceeded your API rate limits (free tier: 1,000 calls/month)
-  4. Test your API key directly: `curl "http://api.weatherstack.com/current?access_key=YOUR_KEY&query=London"`
+  4. Test your API key directly: `curl "http://api.weatherstack.com/current?access_key=YOUR_KEY&query=FES"`
 
 #### **Container Issues** 🐳
 - **Error**: "Port already in use"
@@ -333,13 +304,14 @@ python insert_records.py
 ### Support Resources
 
 For additional help:
-- Check the [Issues](https://github.com/your-repo/issues) page
-- Review Airflow and dbt logs for troubleshooting
-- Consult the [Wiki](https://github.com/your-repo/wiki) for detailed documentation
-- **Weatherstack API Documentation**: [https://weatherstack.com/documentation](https://weatherstack.com/documentation)
+- 📧 **Email**: [mohammedelharchi822@gmail.com]
+- 💬 **Site**: http://mel-harc.github.io/
 
 ---
 
-**Built By Mel-harc using modern data engineering practices**
+<div align="center">
 
-*Transform weather data into actionable insights with enterprise-grade reliability and scalability.*
+**Built By ❤️ by Mel-harc**
+
+</div>
+
