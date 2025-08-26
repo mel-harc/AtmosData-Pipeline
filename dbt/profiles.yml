@@ -1,0 +1,12 @@
+weather_project:
+  outputs:
+    dev:
+      dbname: weather_db
+      host: db
+      pass: ipman42
+      port: 5432
+      schema: dev
+      threads: 4
+      type: postgres
+      user: ipman
+  target: dev
